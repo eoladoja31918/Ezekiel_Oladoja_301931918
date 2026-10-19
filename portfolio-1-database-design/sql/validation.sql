@@ -1,3 +1,67 @@
+-- MIT 8103 Portfolio 1: Clinic constraint validation
+-- Prerequisite: run schema.sql successfully. seed.sql is optional for these tests.
+-- In Neon SQL Editor, select the SAME database, paste this ENTIRE file, and Run.
+-- All test records and temporary objects are rolled back at the end.
+-- Identity sequences may advance despite rollback: harmless gaps are normal.
+-- Expected: 12 PASS rows. A FAIL row means investigation is needed.
+-- This checks single-session behaviour, not concurrent transaction behaviour.
+
+BEGIN ISOLATION LEVEL READ COMMITTED;
+SET LOCAL TIME ZONE 'Africa/Lagos';
+SET LOCAL search_path = clinic, public;
+
+CREATE TEMP TABLE validation_results (
+    test_number INTEGER GENERATED ALWAYS AS IDENTITY,
+    test_name TEXT NOT NULL,
+    outcome TEXT NOT NULL,
+    expected_sqlstate TEXT,
+    actual_sqlstate TEXT,
+    explanation TEXT
+) ON COMMIT DROP;
+
+-- Each invalid operation runs inside its own exception block (savepoint).
+-- Check both the error code and an identifying part of the error message.
+-- If an invalid operation succeeds, force rollback of that operation and mark FAIL.
+CREATE FUNCTION pg_temp.expect_rejection(
+    label TEXT, statement TEXT, expected_code TEXT, expected_message TEXT
+) RETURNS VOID LANGUAGE plpgsql AS $$
+DECLARE
+    actual_code TEXT;
+    actual_message TEXT;
+BEGIN
+    BEGIN
+        EXECUTE statement;
+        -- This custom error rolls back an unexpectedly accepted operation.
+        RAISE EXCEPTION 'Invalid operation was accepted' USING ERRCODE = 'Z0001';
+    EXCEPTION WHEN OTHERS THEN
+        GET STACKED DIAGNOSTICS actual_code = RETURNED_SQLSTATE,
+                                actual_message = MESSAGE_TEXT;
+        INSERT INTO pg_temp.validation_results (
+            test_name, outcome, expected_sqlstate, actual_sqlstate, explanation
+        ) VALUES (
+            label,
+            CASE WHEN actual_code = expected_code
+                      AND position(expected_message IN actual_message) > 0
+                 THEN 'PASS' ELSE 'FAIL' END,
+            expected_code, actual_code, actual_message
+        );
+    END;
+END;
+$$;
+
+DO $$
+DECLARE
+    token TEXT := 'VAL' || txid_current()::text;
+    patient_one BIGINT;
+    patient_two BIGINT;
+    doctor_one BIGINT;
+    doctor_two BIGINT;
+    appointment_one BIGINT;
+    missing_patient BIGINT;
+BEGIN
+    -- Dedicated fictional fixtures avoid changing your existing sample records.
+    INSERT INTO clinic.patients(patient_number,first_name,last_name,date_of_birth)
+    VALUES(token || 'P1','Validation','Patient One','1990-01-01')
     RETURNING patient_id INTO patient_one;
     INSERT INTO clinic.patients(patient_number,first_name,last_name,date_of_birth)
     VALUES(token || 'P2','Validation','Patient Two','1992-01-01')
@@ -110,4 +174,3 @@ ROLLBACK;
 -- Identity-number gaps are expected; existing records are not edited.
 -- Save this file as portfolio-1-database-design/sql/validation.sql.
 -- Save actual result screenshots/exports in portfolio-1-database-design/evidence/.
-
