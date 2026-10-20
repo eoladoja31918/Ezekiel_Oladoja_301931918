@@ -231,18 +231,3 @@ Explain your actual observations in your own words; replace these prompts with y
 
 ChatGPT assisted with drafting the SQL scripts and documentation. The student is responsible for executing and checking the exercises, correcting issues, preserving genuine evidence, and understanding the submitted work. Document the verification performed and any corrections in the final portfolio declaration.
 
-## Completion Checklist
-
-- [ ] All seven scripts are uploaded and links resolve.
-- [x] COMMIT/ROLLBACK final-state counts verified as 1 and 0.
-- [ ] Intermediate uncommitted booking and rollback sequence are captured.
-- [ ] Two independent persistent connections were confirmed.
-- [ ] Isolation observations are recorded in the correct order.
-- [x] Booking-conflict behaviour and the limits of the waiting evidence are accurately described.
-- [x] Final verification shows one saved P3-P-01 booking for the queried doctor/day.
-- [ ] The waiting/competing-session sequence is independently evidenced.
-- [x] All eight supplied screenshots are analysed above.
-- [ ] Missing result grids and error details are captured and linked.
-- [x] AI-assistance declaration is included.
-- [ ] Individual reflection is completed in the student's own words.
-- [ ] Changes are committed progressively and the assessor has repository access.
