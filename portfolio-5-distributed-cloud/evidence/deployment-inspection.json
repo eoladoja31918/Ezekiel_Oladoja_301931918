@@ -1,0 +1,467 @@
+{
+  "portfolio": 5,
+  "database": "clinic_nosql",
+  "collection": "laboratory_reports",
+  "read_only": true,
+  "evidence": [
+    {
+      "section": "1. Connection acknowledgement",
+      "captured_at": {
+        "$date": "2026-10-21T21:19:31.063Z"
+      },
+      "status": "OBSERVED",
+      "result": {
+        "database": "clinic_nosql",
+        "ok": 1
+      }
+    },
+    {
+      "section": "2. Topology advertised by hello",
+      "captured_at": {
+        "$date": "2026-10-21T21:19:31.312Z"
+      },
+      "status": "OBSERVED",
+      "result": {
+        "setName": "atlas-2t8ax2-shard-0",
+        "isWritablePrimary": true,
+        "secondary": false,
+        "primary": "ac-z4np5vh-shard-00-01.feqcxp7.mongodb.net:27017",
+        "me": "ac-z4np5vh-shard-00-01.feqcxp7.mongodb.net:27017",
+        "hosts": [
+          "ac-z4np5vh-shard-00-00.feqcxp7.mongodb.net:27017",
+          "ac-z4np5vh-shard-00-01.feqcxp7.mongodb.net:27017",
+          "ac-z4np5vh-shard-00-02.feqcxp7.mongodb.net:27017"
+        ],
+        "localTime": {
+          "$date": "2026-10-21T21:19:32.109Z"
+        },
+        "maxWireVersion": 25,
+        "interpretation": "Endpoint advertises replica-set membership. Host listing is discovery evidence, not a health or failover test.",
+        "advertised_hosts_count": 3
+      }
+    },
+    {
+      "section": "3. Server version (if permitted)",
+      "captured_at": {
+        "$date": "2026-10-21T21:19:31.504Z"
+      },
+      "status": "OBSERVED",
+      "result": {
+        "version": "8.0.34",
+        "versionArray": [
+          8,
+          0,
+          34,
+          0
+        ]
+      }
+    },
+    {
+      "section": "4. Collection options and validation",
+      "captured_at": {
+        "$date": "2026-10-21T21:19:31.716Z"
+      },
+      "status": "OBSERVED",
+      "result": {
+        "database": "clinic_nosql",
+        "name": "laboratory_reports",
+        "type": "collection",
+        "options": {
+          "validator": {
+            "$and": [
+              {
+                "$jsonSchema": {
+                  "bsonType": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "report_number",
+                    "schema_version",
+                    "patient_number",
+                    "appointment_id",
+                    "request_item_id",
+                    "test",
+                    "status",
+                    "requested_at",
+                    "measurements"
+                  ],
+                  "properties": {
+                    "_id": {
+                      "bsonType": "objectId"
+                    },
+                    "report_number": {
+                      "bsonType": "string",
+                      "pattern": "\\S"
+                    },
+                    "schema_version": {
+                      "bsonType": "int",
+                      "enum": [
+                        1
+                      ]
+                    },
+                    "patient_number": {
+                      "bsonType": "string",
+                      "pattern": "\\S"
+                    },
+                    "appointment_id": {
+                      "bsonType": "string",
+                      "pattern": "^[1-9][0-9]*$"
+                    },
+                    "request_item_id": {
+                      "bsonType": "string",
+                      "pattern": "^[1-9][0-9]*$"
+                    },
+                    "test": {
+                      "bsonType": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "code",
+                        "name"
+                      ],
+                      "properties": {
+                        "code": {
+                          "bsonType": "string",
+                          "pattern": "\\S"
+                        },
+                        "name": {
+                          "bsonType": "string",
+                          "pattern": "\\S"
+                        }
+                      }
+                    },
+                    "status": {
+                      "bsonType": "string",
+                      "enum": [
+                        "pending",
+                        "in-progress",
+                        "completed",
+                        "cancelled"
+                      ]
+                    },
+                    "requested_at": {
+                      "bsonType": "date"
+                    },
+                    "reported_at": {
+                      "bsonType": "date"
+                    },
+                    "measurements": {
+                      "bsonType": "array",
+                      "items": {
+                        "bsonType": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "code",
+                          "name",
+                          "value"
+                        ],
+                        "properties": {
+                          "code": {
+                            "bsonType": "string",
+                            "pattern": "\\S"
+                          },
+                          "name": {
+                            "bsonType": "string",
+                            "pattern": "\\S"
+                          },
+                          "value": {
+                            "anyOf": [
+                              {
+                                "bsonType": [
+                                  "int",
+                                  "long",
+                                  "double",
+                                  "decimal"
+                                ]
+                              },
+                              {
+                                "bsonType": "string",
+                                "pattern": "\\S"
+                              }
+                            ]
+                          },
+                          "unit": {
+                            "bsonType": "string",
+                            "pattern": "\\S"
+                          }
+                        }
+                      }
+                    },
+                    "comments": {
+                      "bsonType": "string"
+                    }
+                  }
+                }
+              },
+              {
+                "$or": [
+                  {
+                    "status": {
+                      "$ne": "completed"
+                    }
+                  },
+                  {
+                    "$jsonSchema": {
+                      "required": [
+                        "reported_at",
+                        "measurements"
+                      ],
+                      "properties": {
+                        "reported_at": {
+                          "bsonType": "date"
+                        },
+                        "measurements": {
+                          "bsonType": "array",
+                          "minItems": 1
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "$expr": {
+                  "$cond": [
+                    {
+                      "$and": [
+                        {
+                          "$eq": [
+                            {
+                              "$type": "$reported_at"
+                            },
+                            "date"
+                          ]
+                        },
+                        {
+                          "$eq": [
+                            {
+                              "$type": "$requested_at"
+                            },
+                            "date"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "$gte": [
+                        "$reported_at",
+                        "$requested_at"
+                      ]
+                    },
+                    true
+                  ]
+                }
+              },
+              {
+                "$expr": {
+                  "$cond": [
+                    {
+                      "$isArray": "$measurements"
+                    },
+                    {
+                      "$let": {
+                        "vars": {
+                          "codes": {
+                            "$map": {
+                              "input": "$measurements",
+                              "as": "m",
+                              "in": "$$m.code"
+                            }
+                          }
+                        },
+                        "in": {
+                          "$eq": [
+                            {
+                              "$size": "$$codes"
+                            },
+                            {
+                              "$size": {
+                                "$setUnion": [
+                                  "$$codes",
+                                  []
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    true
+                  ]
+                }
+              }
+            ]
+          },
+          "validationLevel": "strict",
+          "validationAction": "error"
+        }
+      }
+    },
+    {
+      "section": "5. Stored index definitions",
+      "captured_at": {
+        "$date": "2026-10-21T21:19:31.921Z"
+      },
+      "status": "OBSERVED",
+      "result": [
+        {
+          "v": 2,
+          "key": {
+            "_id": 1
+          },
+          "name": "_id_"
+        },
+        {
+          "v": 2,
+          "key": {
+            "report_number": 1
+          },
+          "name": "uq_report_number",
+          "unique": true
+        },
+        {
+          "v": 2,
+          "key": {
+            "request_item_id": 1
+          },
+          "name": "uq_request_item_id",
+          "unique": true
+        },
+        {
+          "v": 2,
+          "key": {
+            "patient_number": 1,
+            "requested_at": -1,
+            "report_number": 1
+          },
+          "name": "ix_patient_report_history"
+        }
+      ]
+    },
+    {
+      "section": "6. Total report count",
+      "captured_at": {
+        "$date": "2026-10-21T21:19:32.138Z"
+      },
+      "status": "OBSERVED",
+      "result": {
+        "reports": 5
+      }
+    },
+    {
+      "section": "7. P4 batch status counts",
+      "captured_at": {
+        "$date": "2026-10-21T21:19:32.313Z"
+      },
+      "status": "OBSERVED",
+      "result": {
+        "statuses": [
+          {
+            "_id": "completed",
+            "reports": 3
+          },
+          {
+            "_id": "in-progress",
+            "reports": 1
+          },
+          {
+            "_id": "pending",
+            "reports": 1
+          }
+        ]
+      }
+    },
+    {
+      "section": "8. Explicit majority-read example",
+      "captured_at": {
+        "$date": "2026-10-21T21:19:32.514Z"
+      },
+      "status": "OBSERVED",
+      "result": {
+        "requested_read_concern": "majority",
+        "ok": 1,
+        "reports": [
+          {
+            "report_number": "P4-LAB-0002",
+            "status": "completed",
+            "requested_at": {
+              "$date": "2026-10-20T08:00:00Z"
+            },
+            "reported_at": {
+              "$date": "2026-10-20T10:00:00Z"
+            }
+          }
+        ],
+        "limitation": "A successful majority read is not proof of latest-write freshness, replication lag, linearizability, or majority write acknowledgement. No writes are issued."
+      }
+    },
+    {
+      "section": "9. Database statistics (if permitted)",
+      "captured_at": {
+        "$date": "2026-10-21T21:19:32.676Z"
+      },
+      "status": "OBSERVED",
+      "result": {
+        "db": "clinic_nosql",
+        "collections": 1,
+        "objects": 5,
+        "dataSize": 2,
+        "storageSize": 36,
+        "indexes": 4,
+        "indexSize": 144,
+        "note": "Sizes are scaled by the requested factor of 1024 where applicable; counts are not sizes."
+      }
+    },
+    {
+      "section": "10. Replica status (optional; may be restricted)",
+      "captured_at": {
+        "$date": "2026-10-21T21:19:32.883Z"
+      },
+      "status": "OBSERVED",
+      "result": {
+        "set": "atlas-2t8ax2-shard-0",
+        "date": {
+          "$date": "2026-10-21T21:19:33.759Z"
+        },
+        "myState": 1,
+        "members": [
+          {
+            "name": "ac-z4np5vh-shard-00-00.feqcxp7.mongodb.net:27017",
+            "health": 1,
+            "stateStr": "SECONDARY",
+            "self": null,
+            "optimeDate": {
+              "$date": "2026-10-21T21:19:32Z"
+            }
+          },
+          {
+            "name": "ac-z4np5vh-shard-00-01.feqcxp7.mongodb.net:27017",
+            "health": 1,
+            "stateStr": "PRIMARY",
+            "self": true,
+            "optimeDate": {
+              "$date": "2026-10-21T21:19:33Z"
+            }
+          },
+          {
+            "name": "ac-z4np5vh-shard-00-02.feqcxp7.mongodb.net:27017",
+            "health": 1,
+            "stateStr": "SECONDARY",
+            "self": null,
+            "optimeDate": {
+              "$date": "2026-10-21T21:19:32Z"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "section": "11. Default concerns (optional; may be restricted)",
+      "captured_at": {
+        "$date": "2026-10-21T21:19:33.260Z"
+      },
+      "status": "UNAVAILABLE",
+      "error_code": 59,
+      "error_name": "CommandNotFound",
+      "message": "command not found"
+    }
+  ]
+}
