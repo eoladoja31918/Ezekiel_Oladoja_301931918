@@ -25,7 +25,7 @@ The architecture explains replication, availability, consistency, and a proposed
 2. Load the script, adjusting its local path:
 
 ```javascript
-load("C:/Users/YOUR_NAME/Downloads/01-inspect-deployment.js")
+load("C:/Users/Ezekiel Oladoja/Downloads/clinic-deployment-inspection/01-inspect-deployment.js")
 ```
 
 3. Copy the JSON between `BEGIN DEPLOYMENT EVIDENCE JSON` and `END DEPLOYMENT EVIDENCE JSON`, excluding those labels.
