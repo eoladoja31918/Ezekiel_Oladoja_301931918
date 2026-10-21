@@ -105,12 +105,4 @@ Add your own account of running the inspection, interpreting the available and u
 
 ChatGPT assisted with scripting, evidence interpretation, and documentation. The student remains responsible for reviewing and explaining the implementation and including the required AI-use declaration.
 
-- [x] Read-only inspection output reviewed.
-- [x] Replica-set roles and health snapshot extracted.
-- [x] Report totals and explicit majority read documented.
-- [x] Unavailable command and untested features disclosed.
-- [x] Architecture distinguishes observations from proposals.
-- [ ] Tier/provider/region screenshot added if available.
-- [ ] Student reflection completed in the student's own words.
-- [ ] Scripts, JSON, and documentation committed with working links.
-- [ ] Assessor access to the private repository confirmed.
+
