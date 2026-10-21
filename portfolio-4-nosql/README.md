@@ -53,9 +53,9 @@ The sample appointment IDs `901001`â€“`901005` and requested-test IDs `902001`â€
 3. Load each complete file in order, adjusting the Windows path:
 
 ```javascript
-load("C:/Users/YOUR_NAME/Downloads/01-setup.js")
-load("C:/Users/YOUR_NAME/Downloads/02-seed.js")
-load("C:/Users/YOUR_NAME/Downloads/03-queries.js")
+load("C:/Users/Ezekiel Oladoja/Downloads/clinic-mongodb-setup/01-setup.js")
+load("C:/Users/Ezekiel Oladoja/Downloads/clinic-mongodb-seed/02-seed.js")
+load("C:/Users/Ezekiel Oladoja/Downloads/clinic-mongodb-queries/03-queries.js")
 ```
 
 Run each `load` separately and inspect its output before continuing. All scripts explicitly select `clinic_nosql` through `db.getSiblingDB`; the shell prompt may still display `test`. This does not mean data was written to the wrong database.
@@ -186,10 +186,3 @@ A key design lesson is to embed information that shares a bounded report lifecyc
 
 ChatGPT assisted with model design, scripts, and evidence interpretation. The student remains responsible for understanding, executing, reviewing, and explaining the work and declaring assistance in the final submission.
 
-- [x] Document model and suitability are documented.
-- [x] Actual setup, seed-example, and query/explain screenshots are reviewed.
-- [x] Confirmed observations are separated from expected or off-screen results.
-- [ ] Scripts, design file, and screenshots are committed at the linked paths.
-- [ ] Supplementary current-state and status-summary output is captured.
-- [ ] Original before/after and update acknowledgement are retained if available.
-- [ ] Student reflection and assessor access are confirmed.
