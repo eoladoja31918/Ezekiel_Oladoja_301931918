@@ -101,7 +101,7 @@ The evidence shows why deployment claims need precise limits. A replica set and 
 
 Add your own account of running the inspection, interpreting the available and unavailable results, and choosing the proposed consistency and scaling policies.
 
-## AI Assistance and Checklist
+## AI Assistance
 
 ChatGPT assisted with scripting, evidence interpretation, and documentation. The student remains responsible for reviewing and explaining the implementation and including the required AI-use declaration.
 
