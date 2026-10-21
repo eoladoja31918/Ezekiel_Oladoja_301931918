@@ -12,7 +12,7 @@ This portfolio combines an existing cloud database implementation with a distrib
 Three evidence levels are used:
 
 - **Observed:** visible in the supplied Portfolio 4 screenshots.
-- **Pending inspection:** information requested by `01-inspect-deployment.js`, whose output has not yet been supplied for review.
+- **Inspected:** actual results from `evidence/deployment-inspection.json`, captured on 21 October 2026 at approximately 22:19 WAT.
 - **Proposed:** a future architecture or operating policy, not an implemented result.
 
 No failover experiment, replication-lag measurement, majority-write test, or sharded collection is claimed.
@@ -30,8 +30,8 @@ No failover experiment, replication-lag measurement, majority-write test, or sha
 | Stored documents | Completed qualitative, in-progress, and pending reports | Seed screenshot shows these examples |
 | Query execution | Patient-history explain examines two index keys | Query screenshot shows bounds and `keysExamined: 2` |
 | Provider, region, and tier | Not established | Requires Atlas UI evidence |
-| Replica-set name, advertised hosts, and member count | Not established | Requires inspection output; hostnames alone do not prove topology |
-| Majority read / default concerns | Not established | Requires inspection output; earlier operations did not explicitly demonstrate these settings |
+| Replica-set topology | `atlas-2t8ax2-shard-0`; three advertised hosts and three members in replica status | One PRIMARY, two SECONDARY; all report health 1 at inspection |
+| Majority read / default concerns | Explicit majority read acknowledged; default-concern command unavailable | Does not establish concerns used by earlier writes |
 | Sharding | Not demonstrated | No collection sharding metadata supplied |
 
 Existing evidence links:
@@ -77,13 +77,13 @@ Run [01-inspect-deployment.js](scripts/01-inspect-deployment.js) and retain its 
 
 Some commands may be unavailable on the deployed tier or to the database user. Preserve the resulting UNAVAILABLE record as a limitation; do not interpret it as absent replication or request broader administrative rights merely to complete the exercise.
 
-**Current conclusion:** Cloud use and a primary-labelled connection are observed. Detailed replica-set topology and health remain pending inspection.
+**Current conclusion:** The inspection confirms replica-set identity and a snapshot with one primary and two secondaries, all reporting health 1. No failure/recovery test or repeated lag measurement was performed.
 
 ## 5. Availability and Recovery
 
 ### Proposed Resilience Design
 
-For a larger clinic deployment, use a supported configuration with three data-bearing voting replica-set members distributed across suitable failure domains. This is a proposal, not the observed member count or placement of the current cluster.
+For a larger clinic deployment, use a supported configuration with three data-bearing voting replica-set members distributed across suitable failure domains. The observed cluster has three members, but their voting configuration and failure-domain placement were not established; the proposed distribution is not claimed as deployed.
 
 | Event | Intended behaviour | Limit / response |
 |---|---|---|
@@ -118,7 +118,7 @@ Portfolio 4 updates completion fields within one report document, providing a si
 
 The inspection script includes a read-only `readConcern: { level: "majority" }` request. If acknowledged, retain its actual result as evidence of that operation only. Default-concern inspection, if permitted, does not prove which concerns earlier clients used.
 
-No explicit majority-write acknowledgement or causal-session test has yet been evidenced.
+The inspection explicitly acknowledged a majority read of completed report P4-LAB-0002. The getDefaultRWConcern command returned code 59, CommandNotFound. No explicit majority-write acknowledgement or causal-session test has been evidenced.
 
 ## 7. Proposed Sharding Strategy — Not Implemented
 
@@ -171,7 +171,7 @@ The provider, region, tier, shard key, uniqueness redesign, cost, and migration 
 | Evidence | Purpose | Status |
 |---|---|---|
 | Existing Portfolio 4 screenshots | Show cloud-hosted documents, validation, indexes, and execution | Reviewed |
-| `evidence/deployment-inspection.json` | Capture topology, counts, optional status, and majority-read result | Pending upload/review |
+| [deployment-inspection.json](evidence/deployment-inspection.json) | Topology, counts, member status, majority read, and unavailable command | Reviewed; ten OBSERVED sections, one UNAVAILABLE |
 | Atlas cluster screenshot | Confirm tier, provider, region, and configuration shown | Pending |
 | Failover or outage results | Establish recovery behaviour | Not performed; no claim made |
 | Sharding results | Establish actual partitioning | Not performed; proposal only |
@@ -184,7 +184,7 @@ The implemented clinic report service demonstrates managed cloud database use. R
 
 A central lesson is that cloud hosting, replication, high availability, and sharding are distinct claims. A successful query demonstrates access at one moment; it does not demonstrate failover. A replica-set name supports topology identification; it does not prove every member's health. A proposed shard key is incomplete until uniqueness and workload distribution are addressed.
 
-Add an individual reflection on the actual inspection results, unavailable commands, and design decisions after collecting the pending evidence.
+Add your individual reflection on the observed three-member topology, unavailable default-concern command, and the remaining evidence limits.
 
 ## References
 
@@ -198,3 +198,24 @@ Official MongoDB documentation consulted for the architecture discussion:
 6. [Hashed sharding](https://www.mongodb.com/docs/manual/core/hashed-sharding/)
 
 ChatGPT assisted with drafting and technical synthesis. Observations are limited to the evidence identified above; the student remains responsible for validating the deployment and explaining the submitted work.
+
+## Verified Inspection Extract — 21 October 2026
+
+Inspection captured approximately **22:19 WAT (21:19 UTC)**. Ten sections returned observations; one was unavailable.
+
+| Item | Actual result |
+|---|---|
+| Replica set | `atlas-2t8ax2-shard-0` |
+| Member suffix `00-00` | SECONDARY, health 1 |
+| Member suffix `00-01` | PRIMARY, health 1; responding member |
+| Member suffix `00-02` | SECONDARY, health 1 |
+| MongoDB version | `8.0.34` |
+| Database | `clinic_nosql`: one collection, five documents, four indexes |
+| Batch status totals | Completed 3; in-progress 1; pending 1 |
+| Majority read | `ok: 1`; returned completed `P4-LAB-0002` |
+| Report request/report times | 20 October 2026, 08:00 / 10:00 UTC |
+| Default concerns | UNAVAILABLE: code 59, `CommandNotFound`, `command not found` |
+
+Member operation times differ by approximately one second in this single status response. This is a timestamp observation, not a sustained replication-lag benchmark or a guarantee of data freshness. `health: 1` describes the status snapshot, not an availability SLA. The unavailable command does not establish its cause (tier, privileges, or other service restrictions), nor that default concerns are absent.
+
+Provider, region, and tier still require Atlas UI evidence. No failover, outage recovery, sharding, or write-concern experiment was performed. The inspection made no report changes.
