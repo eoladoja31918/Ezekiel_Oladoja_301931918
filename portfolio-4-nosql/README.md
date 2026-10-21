@@ -182,7 +182,7 @@ No cross-database synchronisation, clinical approval, or report-revision history
 
 A key design lesson is to embed information that shares a bounded report lifecycle, while keeping separate clinic entities referenced. A key evidence lesson is to save labelled query results and update acknowledgements, not only the final screen of a long script.
 
-## AI Assistance and Final Checklist
+## AI Assistance
 
 ChatGPT assisted with model design, scripts, and evidence interpretation. The student remains responsible for understanding, executing, reviewing, and explaining the work and declaring assistance in the final submission.
 
