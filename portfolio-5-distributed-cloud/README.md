@@ -97,9 +97,7 @@ Simulated PostgreSQL references from Portfolio 4 remain simulated; the inspectio
 
 ## Reflection
 
-The evidence shows why deployment claims need precise limits. A replica set and healthy member snapshot can be inspected without inducing an outage, while failover still requires separate testing. An unsupported command should be retained as a documented limitation. A future shard key must satisfy both query-routing goals and existing uniqueness requirements.
-
-Add your own account of running the inspection, interpreting the available and unavailable results, and choosing the proposed consistency and scaling policies.
+I deployed a clinic laboratory-report database on MongoDB Atlas and inspected its topology, validation settings, indexes, and report counts. The inspection showed one healthy primary and two healthy secondaries, helping me understand how replica sets support redundancy. A successful majority read demonstrated access to majority-committed report data, but did not prove latest-write freshness or failover capability. When the default-concern command was unavailable, I documented the limitation rather than assuming its settings. Sharding remains a proposal because the five-report dataset does not justify its complexity, and the existing unique indexes require further design consideration. I did not test failover or implement sharding..
 
 ## AI Assistance
 
