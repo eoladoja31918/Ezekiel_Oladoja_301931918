@@ -23,7 +23,7 @@ All records are fictional. The project is not a production clinical system.
 | [Portfolio 4](portfolio-4-nosql/README.md) | MongoDB document model, validation, indexes, sample reports, queries, updates, and suitability |  |
 | [Portfolio 5](portfolio-5-distributed-cloud/README.md) | Cloud deployment inspection, replication, consistency, availability discussion, and sharding proposal |  |
 | Final documentation | 2–3 page summary, repository link, individual reflection, references, and AI-use declaration |  |
-| ** ** | | ** ** |
+
 
 
 ## Repository Structure
