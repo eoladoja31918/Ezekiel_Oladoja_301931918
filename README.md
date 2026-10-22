@@ -15,15 +15,15 @@ All records are fictional. The project is not a production clinical system.
 
 ## Portfolio Navigation and Assessment Mapping
 
-| Component | Focus and deliverables | Marks |
+| Component | Focus and deliverables |
 |---|---|---:|
-| [Portfolio 1](portfolio-1-database-design/README.md) | Case study, business rules, ER diagram, relational schema, keys, constraints, and normalisation | 7 |
-| [Portfolio 2](portfolio-2-query-optimisation/README.md) | SQL queries, ordinary results, execution plans, targeted optimisation, and performance analysis | 7 |
-| [Portfolio 3](portfolio-3-transactions-concurrency/README.md) | COMMIT, ROLLBACK, READ COMMITTED isolation, competing bookings, and evidence review | 7 |
-| [Portfolio 4](portfolio-4-nosql/README.md) | MongoDB document model, validation, indexes, sample reports, queries, updates, and suitability | 7 |
-| [Portfolio 5](portfolio-5-distributed-cloud/README.md) | Cloud deployment inspection, replication, consistency, availability discussion, and sharding proposal | 6 |
-| Final documentation | 2–3 page summary, repository link, individual reflection, references, and AI-use declaration | 6 |
-| **Total** | | **40** |
+| [Portfolio 1](portfolio-1-database-design/README.md) | Case study, business rules, ER diagram, relational schema, keys, constraints, and normalisation |
+| [Portfolio 2](portfolio-2-query-optimisation/README.md) | SQL queries, ordinary results, execution plans, targeted optimisation, and performance analysis |
+| [Portfolio 3](portfolio-3-transactions-concurrency/README.md) | COMMIT, ROLLBACK, READ COMMITTED isolation, competing bookings, and evidence review |
+| [Portfolio 4](portfolio-4-nosql/README.md) | MongoDB document model, validation, indexes, sample reports, queries, updates, and suitability |
+| [Portfolio 5](portfolio-5-distributed-cloud/README.md) | Cloud deployment inspection, replication, consistency, availability discussion, and sharding proposal |
+| Final documentation | 2–3 page summary, repository link, individual reflection, references, and AI-use declaration |
+
 
 ## Repository Structure
 
