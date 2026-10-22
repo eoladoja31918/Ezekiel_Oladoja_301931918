@@ -28,7 +28,7 @@ All records are fictional. The project is not a production clinical system.
 ## Repository Structure
 
 ```text
-advanced-database-portfolio/
+advanced-database-portfolio-Ezekiel-Oladoja-301931918/
 ├── README.md
 ├── portfolio-1-database-design/
 │   ├── README.md
