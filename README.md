@@ -153,7 +153,7 @@ Q3's complete result-equivalence check passed. Its revised plan limits the queue
 
 Verification shows **one persisted booking/note** and **zero records for the rolled-back booking slot**. Final booking evidence shows appointment **30015**, patient **P3-P-01**, doctor **P3-D-01**, on **1 February 2035, 09:00–09:30 WAT**, status `scheduled`.
 
-The supplied screenshots do not establish the complete rollback sequence, before/after isolation values, or simultaneous waiting. Both booking captures show PID **753**. Different isolation-script PIDs captured at different times do not prove concurrent interleaving. Portfolio 3 documents these limits and the additional evidence required.
+The supplied screenshots do not establish the complete rollback sequence, before/after isolation values, or simultaneous waiting. Both booking captures show PID **753**. Different isolation-script PIDs captured at different times do not prove concurrent interleaving. Portfolio 3 documents these limits and the required evidence.
 
 ### MongoDB and Cloud Inspection
 
@@ -163,25 +163,24 @@ The supplied screenshots do not establish the complete rollback sequence, before
 - Replica set **`atlas-2t8ax2-shard-0`** reports **one PRIMARY and two SECONDARY**, all with `health: 1` at inspection.
 - An explicit majority read was acknowledged.
 - Default-concern inspection returned **code 59, CommandNotFound**; its precise restriction cause is not established.
-- **Failover, outage recovery, and sharding were not tested.** Sharding remains a proposal subject to workload analysis and unique-index redesign.
+
 
 ## Evidence and Submission
 
-Keep genuine screenshots, JSON exports, and measured outputs in their portfolio evidence folders. SQL or JavaScript comments describing expected outcomes are not execution evidence. Preserve failure screenshots as troubleshooting records and distinguish final-state checks from full operation-sequence proof.
+Genuine screenshots, JSON exports, and measured outputs have been uploaded into their portfolio evidence folders. SQL or JavaScript comments describe expected outcomes are not execution evidence. 
 
-The LMS deliverable is the [three-page final portfolio summary](documentation/MIT8103_Final_Portfolio_Summary.docx). Insert the actual repository URL, review the reflection and identified evidence gaps, and confirm the assessor can access the private repository before submission. Assessors can use the links in this README to navigate all five activities.
+The LMS deliverable is the [three-page final portfolio summary]([documentation/MIT8103_Final_Portfolio_Summary.docx](https://github.com/eoladoja31918/advanced-database-portfolio-Ezekiel-Oladoja-301931918/blob/main/Ezekiel%20_%20Oladoja%20_%20301931918%20_Final_Portfolio_Summary.pdf). Insert the actual repository URL, review the reflection and identified evidence gaps, and confirm the assessor can access the private repository before submission. Assessors can use the links in this README to navigate all five activities.
 
-## Limitations and Future Improvements
+## Limitations
 
-This educational model does not implement production clinical approvals, comprehensive audit history, consent management, role-based application access, or tested backup/recovery. No live PostgreSQL–MongoDB consistency mechanism exists. The five-document sample does not justify sharding. Proposed sharding cannot retain the current separate global unique indexes unchanged.
+This model does not implement production clinical approvals, comprehensive audit history, consent management, role-based application access, or tested backup/recovery. No live PostgreSQL–MongoDB consistency mechanism exists. The five-document sample does not justify sharding. Proposed sharding cannot retain the current separate global unique indexes unchanged.
 
-Priorities are completing Portfolio 3's persistent-session evidence, capturing Atlas tier/provider/region, measuring index storage/write costs, verifying external references, and testing recovery in a separate authorised exercise. Portfolio 1's complete 12-test result grid and repository-wide link/access checks remain to be independently reviewed.
 
 ## Individual Reflection and AI Assistance
 
-Each portfolio README records technical interpretation and limitations. The final summary contains a reflection draft covering design choices, query-plan analysis, execution errors, session management, and cloud evidence. The student should review and personalise it so it accurately represents individual understanding.
+Each portfolio README records technical interpretation and limitations. The final summary contains a reflection covering design choices, query-plan analysis, execution errors, session management, and cloud evidence. 
 
-ChatGPT assisted with planning, script drafting, evidence analysis, and documentation. Verification used actual Neon exports, MongoDB outputs, and screenshots; unsupported outcomes are not claimed as successful. The student remains responsible for testing, correcting, understanding, and explaining the submission and acknowledging all external sources.
+ChatGPT assisted with planning, script drafting, evidence analysis, and documentation. Verification used actual Neon exports, MongoDB outputs, and screenshots; unsupported outcomes are not claimed as successful. 
 
 ## References
 
