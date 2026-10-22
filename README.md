@@ -15,7 +15,7 @@ All records are fictional. The project is not a production clinical system.
 
 ## Portfolio Navigation and Assessment Mapping
 
-| Component | Focus and deliverables |  |
+| Component | Focus and deliverables |  
 |---|---|---:|
 | [Portfolio 1](portfolio-1-database-design/README.md) | Case study, business rules, ER diagram, relational schema, keys, constraints, and normalisation |  
 | [Portfolio 2](portfolio-2-query-optimisation/README.md) | SQL queries, ordinary results, execution plans, targeted optimisation, and performance analysis |  
