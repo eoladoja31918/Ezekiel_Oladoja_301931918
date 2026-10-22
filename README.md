@@ -83,7 +83,7 @@ advanced-database-portfolio-Ezekiel-Oladoja-301931918/
     └── MIT8103_Final_Portfolio_Summary.docx
 ```
 
-This is the intended repository layout. The final summary must be uploaded to the linked location below; optional additional evidence and reference files may also be included.
+This is the repository layout. The final summary has been uploaded to the linked location below; optional additional evidence and reference files have also been included.
 
 ## Technologies and Prerequisites
 
