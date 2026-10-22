@@ -124,10 +124,10 @@ For a fresh optimisation reproduction after indexes already exist, use a separat
 Connect mongosh to Atlas using your database user, then load each file separately using its actual local path:
 
 ```javascript
-load("C:/Users/Ezekiel Oladoja/Downloads/clinic-mongodb-setup/01-setup.js")
-load("C:/Users/Ezekiel Oladoja/Downloads/clinic-mongodb-seed/02-seed.js")
-load("C:/Users/Ezekiel Oladoja/Downloads/clinic-mongodb-queries/03-queries.js")
-load("C:/Users/Ezekiel Oladoja/Downloads/clinic-deployment-inspection/01-inspect-deployment.js")
+load("C:/path/to/portfolio-4-nosql/scripts/01-setup.js")
+load("C:/path/to/portfolio-4-nosql/scripts/02-seed.js")
+load("C:/path/to/portfolio-4-nosql/scripts/03-queries.js")
+load("C:/path/to/portfolio-5-distributed-cloud/scripts/01-inspect-deployment.js")
 ```
 
 Setup and seed stop on existing collection/batch identifiers rather than overwrite data. Ordered multi-document insertion is not atomic across all documents; inspect partial results after errors. The query script completes only pending `P4-LAB-0002` and skips an already-completed report on reruns.
