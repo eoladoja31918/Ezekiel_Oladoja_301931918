@@ -96,7 +96,6 @@ This is the repository layout. The final summary has been uploaded to the linked
 | MongoDB Atlas and mongosh | Document implementation and read-only deployment inspection |
 | GitHub private repository | Scripts, documentation, evidence, and progressive commits |
 
-The Atlas inspection reported MongoDB **8.0.34**. Provider, region, and cluster tier require separate Atlas UI evidence. Do not assume that separate SQL Editor tabs preserve independent transactions across requests; use two persistent direct PostgreSQL connections for Portfolio 3.
 
 ## Relational and Document Models
 
