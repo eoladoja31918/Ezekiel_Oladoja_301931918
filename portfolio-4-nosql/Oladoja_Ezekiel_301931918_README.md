@@ -22,13 +22,13 @@ This portfolio implements one document model, not all four NoSQL categories.
 
 | File | Purpose |
 |---|---|
-| [model-design.md](model-design.md) | Document structure, field types, rules, indexes, and design justification |
-| [01-setup.js](scripts/01-setup.js) | Creates the collection, validator, and application indexes |
-| [02-seed.js](scripts/02-seed.js) | Inserts five fictional laboratory reports |
-| [03-queries.js](scripts/03-queries.js) | Retrieves reports, searches measurements, completes one report, and explains a query |
-| [01-setup.png](evidence/01-setup.png) | Actual setup configuration and indexes |
-| [02-seed.png](evidence/02-seed.png) | Actual stored sample documents |
-| [03-queries.png](evidence/03-queries.png) | Actual explain output and query-script completion |
+| [Oladoja_Ezekiel_301931918_model-design.md](Oladoja_Ezekiel_301931918_model-design.md) | Document structure, field types, rules, indexes, and design justification |
+| [Oladoja_Ezekiel_301931918_01-setup.js](scripts/Oladoja_Ezekiel_301931918_01-setup.js) | Creates the collection, validator, and application indexes |
+| [Oladoja_Ezekiel_301931918_02-seed.js](scripts/Oladoja_Ezekiel_301931918_02-seed.js) | Inserts five fictional laboratory reports |
+| [Oladoja_Ezekiel_301931918_03-queries.js](scripts/Oladoja_Ezekiel_301931918_03-queries.js) | Retrieves reports, searches measurements, completes one report, and explains a query |
+| [Oladoja_Ezekiel_301931918_01-setup.png](evidence/Oladoja_Ezekiel_301931918_01-setup.png) | Actual setup configuration and indexes |
+| [Oladoja_Ezekiel_301931918_02-seed.png](evidence/Oladoja_Ezekiel_301931918_02-seed.png) | Actual stored sample documents |
+| [Oladoja_Ezekiel_301931918_03-queries.png](evidence/Oladoja_Ezekiel_301931918_03-queries.png) | Actual explain output and query-script completion |
 
 Upload screenshots under their exact linked names. The JavaScript files must be extracted from their download ZIPs before committing them to `scripts/`.
 
