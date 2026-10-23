@@ -17,7 +17,7 @@ All sample records are fictional. This portfolio focuses on database design and 
 | Case study description | [Oladoja_Ezekiel_301931918_case-study.md](Oladoja_Ezekiel_301931918_case-study.md) |
 | Entities and attributes | [Oladoja_Ezekiel_301931918_entities.md](Oladoja_Ezekiel_301931918_entities.md) |
 | Business rules | [Oladoja_Ezekiel_301931918_business-rules.md](Oladoja_Ezekiel_301931918_business-rules.md) |
-| ER diagram | [Oladoja_Ezekiel_301931918_er-diagram.png](portfolio-1-database-design/Oladoja_Ezekiel_301931918_er-diagram.png) |
+| ER diagram | [Oladoja_Ezekiel_301931918_er-diagram.png](https://github.com/eoladoja31918/Oladoja_Ezekiel_301931918/blob/main/portfolio-1-database-design/Oladoja_Ezekiel_301931918_er-diagram.png?raw=true) |
 | Relational schema, keys, and constraints | [Oladoja_Ezekiel_301931918_schema.sql](sql/Oladoja_Ezekiel_301931918_schema.sql) |
 | Normalisation explanation | [Oladoja_Ezekiel_301931918_normalisation.md](Oladoja_Ezekiel_301931918_normalisation.md) |
 | Synthetic sample data | [Oladoja_Ezekiel_301931918_seed.sql](sql/Oladoja_Ezekiel_301931918_seed.sql) |
