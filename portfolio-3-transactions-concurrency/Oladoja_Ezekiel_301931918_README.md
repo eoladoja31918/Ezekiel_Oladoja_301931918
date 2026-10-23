@@ -24,13 +24,13 @@ All demonstration records are fictional. Reserved identifiers are `P3-P-01`, `P3
 
 | File | Purpose |
 |---|---|
-| [01-setup.sql](sql/01-setup.sql) | Creates two test patients and one test doctor |
-| [02-commit-rollback.sql](sql/02-commit-rollback.sql) | Demonstrates persistence and explicit rollback |
-| [03-isolation-session-a.sql](sql/03-isolation-session-a.sql) | Updates the doctor's name in Session A |
-| [04-isolation-session-b.sql](sql/04-isolation-session-b.sql) | Reads the name before and after A commits |
-| [05-booking-session-a.sql](sql/05-booking-session-a.sql) | Creates the first, initially uncommitted booking |
-| [06-booking-session-b.sql](sql/06-booking-session-b.sql) | Attempts a conflicting booking |
-| [07-verify.sql](sql/07-verify.sql) | Displays the surviving booking |
+| [Oladoja_Ezekiel_301931918_01-setup.sql](sql/Oladoja_Ezekiel_301931918_01-setup.sql) | Creates two test patients and one test doctor |
+| [Oladoja_Ezekiel_301931918_02-commit-rollback.sql](sql/Oladoja_Ezekiel_301931918_02-commit-rollback.sql) | Demonstrates persistence and explicit rollback |
+| [Oladoja_Ezekiel_301931918_03-isolation-session-a.sql](sql/Oladoja_Ezekiel_301931918_03-isolation-session-a.sql) | Updates the doctor's name in Session A |
+| [Oladoja_Ezekiel_301931918_04-isolation-session-b.sql](sql/Oladoja_Ezekiel_301931918_04-isolation-session-b.sql) | Reads the name before and after A commits |
+| [Oladoja_Ezekiel_301931918_05-booking-session-a.sql](sql/Oladoja_Ezekiel_301931918_05-booking-session-a.sql) | Creates the first, initially uncommitted booking |
+| [Oladoja_Ezekiel_301931918_06-booking-session-b.sql](sql/Oladoja_Ezekiel_301931918_06-booking-session-b.sql) | Attempts a conflicting booking |
+| [Oladoja_Ezekiel_301931918_07-verify.sql](sql/Oladoja_Ezekiel_301931918_07-verify.sql) | Displays the surviving booking |
 | [Evidence folder](evidence/) | Actual screenshots, outputs, and session observations |
 
 ## Prerequisites
