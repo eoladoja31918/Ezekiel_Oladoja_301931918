@@ -80,7 +80,7 @@ Oladoja_Ezekiel_301931918_/
 │   ├── scripts/Oladoja_Ezekiel_301931918_01-inspect-deployment.js
 │   └── evidence/Oladoja_Ezekiel_301931918_deployment-inspection.json
 └── documentation/
-    └── Ezekiel _ Oladoja _ 301931918 _Final_Portfolio_Summary.pdf
+    └── Ezekiel_Oladoja_301931918_Final_Portfolio_Summary.pdf
 ```
 
 This is the repository layout. The final summary has been uploaded to the linked location below; optional additional evidence and reference files have also been included.
