@@ -148,12 +148,3 @@ After execution, replace the pending status with the actual test date, PASS/FAIL
 
 ChatGPT assisted with drafting the design documentation and generating SQL and validation scripts. The student remains responsible for reviewing the design, executing and checking the scripts in Neon, correcting issues, and explaining the submitted work. Record completed verification and any corrections in the evidence and reflection rather than assuming generated code is correct.
 
-## Completion Checklist
-
-- [ ] Case study and business rules match the implemented scope.
-- [ ] Updated ER diagram matches the SQL schema.
-- [ ] Normalisation explanation is included.
-- [ ] Schema and sample-data scripts execute successfully.
-- [ ] Actual validation results are recorded and any failures are resolved.
-- [ ] Evidence files are uploaded and relative links work.
-- [ ] Progressive commits and assessor access are in place.
