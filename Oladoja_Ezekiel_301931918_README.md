@@ -17,11 +17,11 @@ All records are fictional. The project is not a production clinical system.
 
 | Component | Focus and deliverables ||
 |---|---|---:|
-| [Portfolio 1](portfolio-1-database-design/README.md) | Case study, business rules, ER diagram, relational schema, keys, constraints, and normalisation |  
-| [Portfolio 2](portfolio-2-query-optimisation/README.md) | SQL queries, ordinary results, execution plans, targeted optimisation, and performance analysis |  
-| [Portfolio 3](portfolio-3-transactions-concurrency/README.md) | COMMIT, ROLLBACK, READ COMMITTED isolation, competing bookings, and evidence review |  
-| [Portfolio 4](portfolio-4-nosql/README.md) | MongoDB document model, validation, indexes, sample reports, queries, updates, and suitability |  
-| [Portfolio 5](portfolio-5-distributed-cloud/README.md) | Cloud deployment inspection, replication, consistency, availability discussion, and sharding proposal |  
+| [Portfolio 1](https://github.com/eoladoja31918/Oladoja_Ezekiel_301931918/blob/main/portfolio-1-database-design/Oladoja_Ezekiel_301931918_README.md) | Case study, business rules, ER diagram, relational schema, keys, constraints, and normalisation |  
+| [Portfolio 2](https://github.com/eoladoja31918/Oladoja_Ezekiel_301931918/blob/main/portfolio-2-query-optimisation/Oladoja_Ezekiel_301931918_README.md) | SQL queries, ordinary results, execution plans, targeted optimisation, and performance analysis |  
+| [Portfolio 3](https://github.com/eoladoja31918/Oladoja_Ezekiel_301931918/blob/main/portfolio-3-transactions-concurrency/Oladoja_Ezekiel_301931918_README.md) | COMMIT, ROLLBACK, READ COMMITTED isolation, competing bookings, and evidence review |  
+| [Portfolio 4](https://github.com/eoladoja31918/Oladoja_Ezekiel_301931918/blob/main/portfolio-4-nosql/Oladoja_Ezekiel_301931918_README.md) | MongoDB document model, validation, indexes, sample reports, queries, updates, and suitability |  
+| [Portfolio 5](https://github.com/eoladoja31918/Oladoja_Ezekiel_301931918/blob/main/portfolio-5-distributed-cloud/Oladoja_Ezekiel_301931918_README.md) | Cloud deployment inspection, replication, consistency, availability discussion, and sharding proposal |  
 | Final documentation | 2–3 page summary, repository link, individual reflection, references, and AI-use declaration |  
 
 
