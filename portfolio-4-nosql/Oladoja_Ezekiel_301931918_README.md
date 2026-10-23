@@ -85,7 +85,7 @@ The following describes only what is visible in the supplied screenshots. Output
 
 ### 1. Collection Setup — Confirmed
 
-[01-setup.png](evidence/01-setup.png) shows:
+[01-setup.png](evidence/Oladoja_Ezekiel_301931918_01-setup.png) shows:
 
 - `validationLevel: 'strict'` and `validationAction: 'error'`.
 - The validator tail includes measurement-code uniqueness logic using `$size` and `$setUnion`.
@@ -99,7 +99,7 @@ This verifies stored setup configuration. It does not demonstrate an attempted i
 
 ### 2. Seed Documents — Confirmed Examples
 
-[02-seed.png](evidence/02-seed.png) visibly contains these stored documents:
+[02-seed.png](evidence/Oladoja_Ezekiel_301931918_02-seed.png) visibly contains these stored documents:
 
 | Report | Patient | Test | Status | Visible result |
 |---|---|---|---|---|
@@ -113,7 +113,7 @@ The seed script specifies five reports with initial counts of **2 completed, 2 p
 
 ### 3. Queries and Explain — Confirmed Visible Output
 
-[03-queries.png](evidence/03-queries.png) shows:
+[03-queries.png](evidence/Oladoja_Ezekiel_301931918_03-queries.png) shows:
 
 - Explain command `find: 'laboratory_reports'`, with `$db: 'clinic_nosql'`.
 - Filter `{ patient_number: 'PAT001' }`.
