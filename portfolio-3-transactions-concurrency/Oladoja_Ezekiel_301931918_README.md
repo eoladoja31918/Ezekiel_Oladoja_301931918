@@ -14,11 +14,11 @@ All demonstration records are fictional. Reserved identifiers are `P3-P-01`, `P3
 
 | Required evidence | Demonstration | Supporting files |
 |---|---|---|
-| COMMIT | Save an appointment and an associated synthetic note together | `02-commit-rollback.sql` and result output |
-| ROLLBACK | Insert a second appointment, then discard it | `02-commit-rollback.sql` and before/after output |
-| Isolation | Compare visibility before and after another session commits | `03-isolation-session-a.sql`, `04-isolation-session-b.sql` |
-| Concurrency issue or control mechanism | Attempt overlapping bookings for one doctor in two sessions | `05-booking-session-a.sql`, `06-booking-session-b.sql` |
-| Screenshots/output evidence | Verify transaction outcomes and the surviving booking | `evidence/` and `07-verify.sql` |
+| COMMIT | Save an appointment and an associated synthetic note together | `Oladoja_Ezekiel_301931918_02-commit-rollback.sql` and result output |
+| ROLLBACK | Insert a second appointment, then discard it | `Oladoja_Ezekiel_301931918_02-commit-rollback.sql` and before/after output |
+| Isolation | Compare visibility before and after another session commits | `Oladoja_Ezekiel_301931918_03-isolation-session-a.sql`, `Oladoja_Ezekiel_301931918_04-isolation-session-b.sql` |
+| Concurrency issue or control mechanism | Attempt overlapping bookings for one doctor in two sessions | `Oladoja_Ezekiel_301931918_05-booking-session-a.sql`, `Oladoja_Ezekiel_301931918_06-booking-session-b.sql` |
+| Screenshots/output evidence | Verify transaction outcomes and the surviving booking | `evidence/` and `Oladoja_Ezekiel_301931918_07-verify.sql` |
 
 ## Repository Files
 
