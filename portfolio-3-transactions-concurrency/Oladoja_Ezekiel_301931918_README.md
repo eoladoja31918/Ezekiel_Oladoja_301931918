@@ -159,7 +159,7 @@ Upload the supplied screenshots unchanged to `evidence/` using their original fi
 
 ### Supplementary COMMIT/ROLLBACK Verification
 
-[commit-rollback-verification.png](evidence/commit-rollback-verification.png) displays a successful two-row verification grid:
+[Commit Rollback Verification](https://github.com/eoladoja31918/Oladoja_Ezekiel_301931918/blob/main/portfolio-3-transactions-concurrency/evidence/Oladoja_Ezekiel_301931918_commit-rollback-verification.png) displays a successful two-row verification grid:
 
 | Check | Actual rows | Expected rows | Assessment |
 |---|---:|---:|---|
