@@ -14,14 +14,14 @@ All sample records are fictional. This portfolio focuses on database design and 
 
 | Requirement | File |
 |---|---|
-| Case study description | [case-study.md](Oladoja_Ezekiel_301931918_case-study.md) |
-| Entities and attributes | [entities.md](Oladoja_Ezekiel_301931918_entities.md) |
-| Business rules | [business-rules.md](Oladoja_Ezekiel_301931918_business-rules.md) |
-| ER diagram | [er-diagram.png](diagrams/Oladoja_Ezekiel_301931918_er-diagram.png) |
-| Relational schema, keys, and constraints | [schema.sql](sql/Oladoja_Ezekiel_301931918_schema.sql) |
-| Normalisation explanation | [normalisation.md](Oladoja_Ezekiel_301931918_normalisation.md) |
-| Synthetic sample data | [seed.sql](sql/Oladoja_Ezekiel_301931918_seed.sql) |
-| Constraint validation | [validation.sql](sql/Oladoja_Ezekiel_301931918_validation.sql) |
+| Case study description | [Oladoja_Ezekiel_301931918_case-study.md](Oladoja_Ezekiel_301931918_case-study.md) |
+| Entities and attributes | [Oladoja_Ezekiel_301931918_entities.md](Oladoja_Ezekiel_301931918_entities.md) |
+| Business rules | [Oladoja_Ezekiel_301931918_business-rules.md](Oladoja_Ezekiel_301931918_business-rules.md) |
+| ER diagram | [Oladoja_Ezekiel_301931918_er-diagram.png](diagrams/Oladoja_Ezekiel_301931918_er-diagram.png) |
+| Relational schema, keys, and constraints | [Oladoja_Ezekiel_301931918_schema.sql](sql/Oladoja_Ezekiel_301931918_schema.sql) |
+| Normalisation explanation | [Oladoja_Ezekiel_301931918_normalisation.md](Oladoja_Ezekiel_301931918_normalisation.md) |
+| Synthetic sample data | [Oladoja_Ezekiel_301931918_seed.sql](sql/Oladoja_Ezekiel_301931918_seed.sql) |
+| Constraint validation | [Oladoja_Ezekiel_301931918_validation.sql](sql/Oladoja_Ezekiel_301931918_validation.sql) |
 | Execution evidence | [evidence folder](evidence/) |
 
 ![Clinic entity relationship diagram](https://github.com/eoladoja31918/Oladoja_Ezekiel_301931918/blob/main/portfolio-1-database-design/Oladoja_Ezekiel_301931918_er-diagram.png)
