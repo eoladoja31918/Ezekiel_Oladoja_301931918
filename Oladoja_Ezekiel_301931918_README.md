@@ -29,58 +29,58 @@ All records are fictional. The project is not a production clinical system.
 ## Repository Structure
 
 ```text
-advanced-database-portfolio-Ezekiel-Oladoja-301931918/
-├── README.md
+Oladoja_Ezekiel_301931918_/
+├── Oladoja_Ezekiel_301931918_README.md
 ├── portfolio-1-database-design/
-│   ├── README.md
-│   ├── case-study.md
-│   ├── entities.md
-│   ├── business-rules.md
-│   ├── normalisation.md
-│   ├── diagrams/er-diagram.png
+│   ├── Oladoja_Ezekiel_301931918_README.md
+│   ├── Oladoja_Ezekiel_301931918_case-study.md
+│   ├── Oladoja_Ezekiel_301931918_entities.md
+│   ├── Oladoja_Ezekiel_301931918_business-rules.md
+│   ├── Oladoja_Ezekiel_301931918_normalisation.md
+│   ├── Oladoja_Ezekiel_301931918_er-diagram.png
 │   ├── sql/
-│   │   ├── schema.sql
-│   │   ├── seed.sql
-│   │   └── validation.sql
+│   │   ├── Oladoja_Ezekiel_301931918_schema.sql
+│   │   ├── Oladoja_Ezekiel_301931918_seed.sql
+│   │   └── Oladoja_Ezekiel_301931918_validation.sql
 │   └── evidence/
 ├── portfolio-2-query-optimisation/
-│   ├── README.md
+│   ├── Oladoja_Ezekiel_301931918_README.md
 │   ├── sql/
-│   │   ├── generate-data.sql
-│   │   ├── queries.sql
-│   │   ├── capture-baselines.sql
-│   │   └── optimisation.sql
-│   ├── analysis/performance-comparison.md
+│   │   ├── Oladoja_Ezekiel_301931918_generate-data.sql
+│   │   ├── Oladoja_Ezekiel_301931918_queries.sql
+│   │   ├── Oladoja_Ezekiel_301931918_capture-baselines.sql
+│   │   └── Oladoja_Ezekiel_301931918_optimisation.sql
+│   ├── analysis/Oladoja_Ezekiel_301931918_performance-comparison.md
 │   └── evidence/
-│       ├── query-results/
-│       ├── baseline-plans/baseline-plans.json
-│       └── optimised-plans/optimised-baseline-plans.json
+│       ├── Oladoja_Ezekiel_301931918_query-results/
+│       ├── baseline-plans/Oladoja_Ezekiel_301931918_baseline-plans.json
+│       └── optimised-plans/Oladoja_Ezekiel_301931918_optimised-baseline-plans.json
 ├── portfolio-3-transactions-concurrency/
-│   ├── README.md
+│   ├── Oladoja_Ezekiel_301931918_README.md
 │   ├── sql/
-│   │   ├── 01-setup.sql
-│   │   ├── 02-commit-rollback.sql
-│   │   ├── 03-isolation-session-a.sql
-│   │   ├── 04-isolation-session-b.sql
-│   │   ├── 05-booking-session-a.sql
-│   │   ├── 06-booking-session-b.sql
-│   │   └── 07-verify.sql
+│   │   ├── Oladoja_Ezekiel_301931918_01-setup.sql
+│   │   ├── Oladoja_Ezekiel_301931918_02-commit-rollback.sql
+│   │   ├── Oladoja_Ezekiel_301931918_03-isolation-session-a.sql
+│   │   ├── Oladoja_Ezekiel_301931918_04-isolation-session-b.sql
+│   │   ├── Oladoja_Ezekiel_301931918_05-booking-session-a.sql
+│   │   ├── Oladoja_Ezekiel_301931918_06-booking-session-b.sql
+│   │   └── Oladoja_Ezekiel_301931918_07-verify.sql
 │   └── evidence/
 ├── portfolio-4-nosql/
-│   ├── README.md
-│   ├── model-design.md
+│   ├── Oladoja_Ezekiel_301931918_README.md
+│   ├── Oladoja_Ezekiel_301931918_model-design.md
 │   ├── scripts/
-│   │   ├── 01-setup.js
-│   │   ├── 02-seed.js
-│   │   └── 03-queries.js
+│   │   ├── Oladoja_Ezekiel_301931918_01-setup.js
+│   │   ├── Oladoja_Ezekiel_301931918_02-seed.js
+│   │   └── Oladoja_Ezekiel_301931918_03-queries.js
 │   └── evidence/
 ├── portfolio-5-distributed-cloud/
-│   ├── README.md
-│   ├── architecture.md
-│   ├── scripts/01-inspect-deployment.js
-│   └── evidence/deployment-inspection.json
+│   ├── Oladoja_Ezekiel_301931918_README.md
+│   ├── Oladoja_Ezekiel_301931918_architecture.md
+│   ├── scripts/Oladoja_Ezekiel_301931918_01-inspect-deployment.js
+│   └── evidence/Oladoja_Ezekiel_301931918_deployment-inspection.json
 └── documentation/
-    └── MIT8103_Final_Portfolio_Summary.docx
+    └── Ezekiel _ Oladoja _ 301931918 _Final_Portfolio_Summary.pdf
 ```
 
 This is the repository layout. The final summary has been uploaded to the linked location below; optional additional evidence and reference files have also been included.
