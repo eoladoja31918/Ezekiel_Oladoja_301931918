@@ -12,14 +12,14 @@ Evaluate clinic SQL queries using actual results and execution plans, apply just
 
 | Requirement | File or folder |
 |---|---|
-| Synthetic performance dataset | [generate-data.sql](sql/Oladoja_Ezekiel_301931918_generate-data.sql) |
-| SQL queries | [queries.sql](sql/Oladoja_Ezekiel_301931918_queries.sql) |
-| Ordinary query results | [query-results](evidence/Oladoja_Ezekiel_301931918_query-results/) |
-| Baseline capture script | [capture-baselines.sql](sql/Oladoja_Ezekiel_301931918_capture-baselines.sql) |
-| Baseline execution plans | [baseline-plans.json](evidence/baseline-plans/Oladoja_Ezekiel_301931918_baseline-plans.json) |
-| Indexes, query rewrite, and optimised capture | [optimisation.sql](sql/Oladoja_Ezekiel_301931918_optimisation.sql) |
-| Optimised execution plans | [optimised-baseline-plans.json](evidence/optimised-plans/Oladoja_Ezekiel_301931918_optimised-baseline-plans.json) |
-| Performance analysis | [performance-comparison.md](analysis/Oladoja_Ezekiel_301931918_performance-comparison.md) |
+| Synthetic performance dataset | [Oladoja_Ezekiel_301931918_generate-data.sql](sql/Oladoja_Ezekiel_301931918_generate-data.sql) |
+| SQL queries | [Oladoja_Ezekiel_301931918_queries.sql](sql/Oladoja_Ezekiel_301931918_queries.sql) |
+| Ordinary query results | [Oladoja_Ezekiel_301931918_query-results](evidence/Oladoja_Ezekiel_301931918_query-results/) |
+| Baseline capture script | [Oladoja_Ezekiel_301931918_capture-baselines.sql](sql/Oladoja_Ezekiel_301931918_capture-baselines.sql) |
+| Baseline execution plans | [Oladoja_Ezekiel_301931918_baseline-plans.json](evidence/baseline-plans/Oladoja_Ezekiel_301931918_baseline-plans.json) |
+| Indexes, query rewrite, and optimised capture | [Oladoja_Ezekiel_301931918_optimisation.sql](sql/Oladoja_Ezekiel_301931918_optimisation.sql) |
+| Optimised execution plans | [Oladoja_Ezekiel_301931918_optimised-baseline-plans.json](evidence/optimised-plans/Oladoja_Ezekiel_301931918_optimised-baseline-plans.json) |
+| Performance analysis | [Oladoja_Ezekiel_301931918_performance-comparison.md](analysis/Oladoja_Ezekiel_301931918_performance-comparison.md) |
 
 These files address the required SQL queries, query results, execution plans, optimisation evidence, and brief performance analysis. Upload each file at the linked path; links to evidence not yet uploaded will not resolve.
 
