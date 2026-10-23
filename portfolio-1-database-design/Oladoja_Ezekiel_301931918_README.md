@@ -24,7 +24,7 @@ All sample records are fictional. This portfolio focuses on database design and 
 | Constraint validation | [validation.sql](sql/validation.sql) |
 | Execution evidence | [evidence folder](evidence/) |
 
-![Clinic entity relationship diagram](diagrams/er-diagram.png)
+![Clinic entity relationship diagram](https://github.com/eoladoja31918/Oladoja_Ezekiel_301931918/blob/main/portfolio-1-database-design/Oladoja_Ezekiel_301931918_er-diagram.png)
 
 ## Database Structure
 
