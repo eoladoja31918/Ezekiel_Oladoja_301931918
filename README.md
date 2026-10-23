@@ -169,7 +169,7 @@ The supplied screenshots do not establish the complete rollback sequence, before
 
 Genuine screenshots, JSON exports, and measured outputs have been uploaded into their portfolio evidence folders. SQL or JavaScript comments describe expected outcomes are not execution evidence. 
 
-The LMS deliverable is the [three-page final portfolio summary]([Ezekiel _ Oladoja _ 301931918 _Final_Portfolio_Summary](https://github.com/eoladoja31918/advanced-database-portfolio-Ezekiel-Oladoja-301931918/blob/main/Ezekiel%20_%20Oladoja%20_%20301931918%20_Final_Portfolio_Summary.pdf). The repository URL, review the reflection and identified evidence gaps are acessible to the assessor, and  the assessor can access the private repository before submission. Assessors can use the links in this README to navigate all five activities.
+The LMS deliverable is the [three-page final portfolio summary]([Ezekiel _ Oladoja _ 301931918 _Final_Portfolio_Summary](https://github.com/eoladoja31918/advanced-database-portfolio-Ezekiel-Oladoja-301931918/blob/main/Ezekiel%20_%20Oladoja%20_%20301931918%20_Final_Portfolio_Summary.pdf). The repository URL, review the reflection and identified evidence gaps are acessible to the assessor, and  the assessor can access the private repository. Assessors can use the links in this README to navigate all five activities.
 
 ## Limitations
 
