@@ -14,7 +14,7 @@ Evaluate clinic SQL queries using actual results and execution plans, apply just
 |---|---|
 | Synthetic performance dataset | [Oladoja_Ezekiel_301931918_generate-data.sql](sql/Oladoja_Ezekiel_301931918_generate-data.sql) |
 | SQL queries | [Oladoja_Ezekiel_301931918_queries.sql](sql/Oladoja_Ezekiel_301931918_queries.sql) |
-| Ordinary query results | [Oladoja_Ezekiel_301931918_query-results](evidence/Oladoja_Ezekiel_301931918_query-results/) |
+| Ordinary query results | [Oladoja_Ezekiel_301931918_query-results](https://github.com/eoladoja31918/Oladoja_Ezekiel_301931918/blob/main/portfolio-2-query-optimisation/evidence/Oladoja_Ezekiel_301931918_queries.png) |
 | Baseline capture script | [Oladoja_Ezekiel_301931918_capture-baselines.sql](sql/Oladoja_Ezekiel_301931918_capture-baselines.sql) |
 | Baseline execution plans | [Oladoja_Ezekiel_301931918_baseline-plans.json](evidence/baseline-plans/Oladoja_Ezekiel_301931918_baseline-plans.json) |
 | Indexes, query rewrite, and optimised capture | [Oladoja_Ezekiel_301931918_optimisation.sql](sql/Oladoja_Ezekiel_301931918_optimisation.sql) |
