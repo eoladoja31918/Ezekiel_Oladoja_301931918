@@ -6,7 +6,7 @@
 
 ## Objective
 
-Evaluate clinic SQL queries using actual results and execution plans, apply justified optimisations, and compare performance while checking correctness. This builds on the normalised `clinic` schema from [Portfolio 1](../portfolio-1-database-design/README.md).
+Evaluate clinic SQL queries using actual results and execution plans, apply justified optimisations, and compare performance while checking correctness. This builds on the normalised `clinic` schema from [Portfolio 1](../portfolio-1-database-design/Oladoja_Ezekiel_301931918_README.md).
 
 ## Files and Assessment Evidence
 
@@ -113,10 +113,3 @@ Q3's indexes and rewrite were applied together; their individual contributions w
 
 ChatGPT assisted with SQL drafting, plan interpretation, and documentation. The submitted plan exports provide execution evidence from Neon. The student remains responsible for reviewing the scripts, checking results, acknowledging assistance, and explaining the implementation and conclusions.
 
-## Final Checklist
-
-- [ ] All linked scripts and the performance analysis are uploaded.
-- [ ] Original baseline and optimised JSON exports are uploaded unchanged.
-- [ ] Ordinary results for Q1–Q4 are saved under `evidence/query-results/`.
-- [ ] Relative links work and the assessor can access the private repository.
-- [ ] Measured findings, limitations, and individual reflection have been reviewed.
