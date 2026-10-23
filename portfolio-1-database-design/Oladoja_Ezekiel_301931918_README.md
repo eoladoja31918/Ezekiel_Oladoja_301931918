@@ -114,15 +114,13 @@ Minimum-item triggers are normally deferred until transaction end. The validatio
 
 All validation fixtures are rolled back. Identity sequences may still advance, producing normal gaps in generated IDs. If execution stops unexpectedly, run `ROLLBACK;`.
 
-### Evidence to Save
+### Evidence
 
-Save actual screenshots or exports using the following suggested names. These links become usable after the files are uploaded:
 
-- [Ten-table verification](evidence/01-tables-created.png)
-- [Loaded sample records](evidence/02-sample-data.png)
-- [Validation results](evidence/03-validation-results.png)
+- [Ten-table verification](https://github.com/eoladoja31918/Oladoja_Ezekiel_301931918/blob/main/portfolio-1-database-design/evidence/Oladoja_Ezekiel_301931918_Ten_Table.png)
+- [Loaded sample records](https://github.com/eoladoja31918/Oladoja_Ezekiel_301931918/blob/main/portfolio-1-database-design/evidence/Oladoja_Ezekiel_301931918_Loaded_Sample_Records.png)
+- [Validation results](https://github.com/eoladoja31918/Oladoja_Ezekiel_301931918/blob/main/portfolio-1-database-design/evidence/Oladoja_Ezekiel_301931918_Validation_Results.png)
 
-After execution, replace the pending status with the actual test date, PASS/FAIL counts, and any fixes. Capture additional screenshots if all 12 result rows do not fit in one image. Never report unexecuted tests as passed.
 
 ## Design Choices
 
