@@ -12,10 +12,10 @@ Document the clinic's deployed cloud database, inspect replica-set topology and 
 
 | Requirement / purpose | File |
 |---|---|
-| Distributed/cloud discussion | [architecture.md](architecture.md) |
-| Read-only inspection implementation | [01-inspect-deployment.js](scripts/01-inspect-deployment.js) |
-| Actual deployment evidence | [deployment-inspection.json](evidence/deployment-inspection.json) |
-| Clinic document implementation | [Portfolio 4 README](../portfolio-4-nosql/README.md) |
+| Distributed/cloud discussion | [architecture.md](Oladoja_Ezekiel_301931918_architecture.md) |
+| Read-only inspection implementation | [01-inspect-deployment.js](scripts/Oladoja_Ezekiel_301931918_01-inspect-deployment.js) |
+| Actual deployment evidence | [deployment-inspection.json](evidence/Oladoja_Ezekiel_301931918_deployment-inspection.json) |
+| Clinic document implementation | [Portfolio 4 README](../portfolio-4-nosql/Oladoja_Ezekiel_301931918_README.md) |
 
 The architecture explains replication, availability, consistency, and a proposed sharding strategy. The JSON establishes actual topology, member status, collection configuration, counts, and one explicit majority-read result. Upload the files at these exact relative paths.
 
