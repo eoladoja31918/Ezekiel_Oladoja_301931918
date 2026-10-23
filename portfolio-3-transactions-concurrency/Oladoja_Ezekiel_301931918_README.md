@@ -35,7 +35,7 @@ All demonstration records are fictional. Reserved identifiers are `P3-P-01`, `P3
 
 ## Prerequisites
 
-- The existing `clinic` schema from [Portfolio 1](../portfolio-1-database-design/README.md), including its foreign keys and appointment exclusion constraints.
+- The existing `clinic` schema from [Portfolio 1](../portfolio-1-database-design/Oladoja_Ezekiel_301931918_README.md), including its foreign keys and appointment exclusion constraints.
 - Access to the same Neon branch and database throughout the exercise.
 - Permission to insert demonstration records and update the fictional doctor's name.
 - Two independent persistent PostgreSQL connections for isolation and concurrent booking, preferably two interactive psql terminals using the direct, non-pooled Neon endpoint.
@@ -46,7 +46,7 @@ Keep credentials out of GitHub, screenshots, and submitted logs.
 
 ## 1. Create the Demonstration Records
 
-Run `01-setup.sql` once. Confirm that the following records exist:
+Run `Oladoja_Ezekiel_301931918_01-setup.sql` once. Confirm that the following records exist:
 
 | Identifier | Record |
 |---|---|
@@ -58,7 +58,7 @@ The setup is transactional. If an identifier already exists, stop and inspect th
 
 ## 2. Demonstrate COMMIT and ROLLBACK
 
-Run `02-commit-rollback.sql` once after successful setup.
+Run `Oladoja_Ezekiel_301931918_02-commit-rollback.sql` once after successful setup.
 
 ### COMMIT
 
@@ -122,7 +122,7 @@ Use the booking scripts with two independent persistent sessions. Different pati
 3. While B is waiting, switch to A and COMMIT.
 4. Observe B's exclusion-constraint error, normally SQLSTATE `23P01`, naming `doctor_schedule_no_overlap`.
 5. Run `ROLLBACK;` in B to clear its failed transaction.
-6. Run `07-verify.sql` after both transactions have ended.
+6. Run `Oladoja_Ezekiel_301931918_07-verify.sql` after both transactions have ended.
 
 **Expected final result:** exactly one booking for `P3-P-01`, **09:00–09:30 WAT**, with status `scheduled`.
 
